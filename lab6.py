@@ -10,9 +10,12 @@ def encode_password(password):
 
 
 # Decodes password by subtracting 3 from each character and returning the decoded password.
-def decode_password(password):
-    # FIXME: Add decoding function
-    pass
+def decode_password(encoded_password):
+    d_password = ''
+    for char in encoded_password:
+        decoded_character = str(int(char) - 3)
+        d_password += decoded_character
+    return d_password
 
 
 if __name__ == '__main__':
